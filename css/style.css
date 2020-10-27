@@ -1,0 +1,96 @@
+fbody {
+    background-color: cornflowerblue; 
+}
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#gameboard {
+    width: 90vh;
+    height: 90vh;
+    background-color: green;
+    padding-left: 0;
+    border: black solid 2px;
+}
+
+ul[id^="row-"] {
+    list-style: none;
+    display: block;
+    padding-left: 0;
+}
+
+ul[id^="row-"] li {
+    width: 12.5%;
+    height: 12.5%;
+    float: left;
+}
+
+ul[id^="row-"]:nth-child(even) li:nth-child(even),
+ul[id^="row-"]:nth-child(odd) li:nth-child(odd){
+    background-color: rgb(245, 39, 39);
+}
+
+ul[id^="row-"]:nth-child(even) li:nth-child(odd),
+ul[id^="row-"]:nth-child(odd) li:nth-child(even){
+    background-color: rgb(51, 48, 48);
+}
+
+/*////////////////////////*/
+
+#turn-nav {
+    align-self: center;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+
+#player-turn {
+    margin-left: 2rem;
+}
+
+#end-turn {
+    background-color: lime;
+    background: darkgreen solid 1px;
+    font-size: 2rem;
+    margin-left: 3rem;
+}
+
+.fa-5x {
+    color: red;
+    margin: 10rem 2rem 10rem 0;
+    align-self: flex-end;
+}
+
+.fa-crown {
+    color: white;
+    align-self: center;
+    margin: auto;
+}
+/********** Tokens *******/
+
+.token {
+    min-width: 90%;
+    min-height: 90%;
+    border-radius: 50%;
+    display: flex;
+    
+}
+
+.red {
+    background-color: darkred;
+    box-shadow: 3px 5px 2px darkred;
+    border: black solid 1px;
+
+}
+
+.black {
+    background-color: black;
+    box-shadow: 3px 5px 2px black;
+    border: rgb(95, 93, 93) solid 1px;
+}
+
+.selected {
+    border: yellow solid 3px;
+}
